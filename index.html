@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <title>Database Firebase</title>
+</head>
+<body>
+
+    <h1>Firebase - Create notes</h1>
+    <div class="container my-5">
+    <div class="col1">
+
+   
+    <form class="formAdd">
+        <label for="recipe">Add a new note</label>
+        <p class="time">Use this form to write a note. Do you want to update an exicsting note, use this form again and click update on the note.</p>
+        <div class="input-group form-style-6">
+            <input type="text" class="form-control" placeholder="Write a title for the note" id="recipe" required>
+            <input type="text" class="form-control" placeholder="Write the note" id="notes" required>
+            
+            <br><input type="checkbox" id="important" name="important" class="checkboxImportant" value="checkmark">
+            <label for="importnatnote"> Vigtig note </label>
+            
+            <div class="input-group-append">
+                <input type="submit" value="Tilføj note" class="btn btn-outline-secondary">
+               
+            </div>
+            <div>
+                
+              
+            </div>
+        </div>
+    </form>
+
+  
+        <form class="search form-style-6">
+            <input class="form-control m auto searchform" type="text" name="search" placeholder="search for note" id="searchID" required>       
+        </form>
+
+
+        <ul class="todos">
+            
+        </ul>
+
+
+    </div>
+    
+    </div>
+
+
+
+ 
+
+                       
+
+                    <div id="importantFilter">
+                
+
+                        <label for="search">Se kun vigtige noter</label>
+                        <input type="checkbox" class="searchImportant" id="filter_IN">
+                        </label>
+                        
+                    </div>
+         
+   
+   
+            
+</div><!-- updateDiv -->
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+
+<script>
+
+const firebaseConfig = {
+    apiKey: "AIzaSyBZqez7R9Xd8QQfkqxMABG1b_j2omwVheE",
+    authDomain: "firenotes-55f74.firebaseapp.com",
+    projectId: "firenotes-55f74",
+    storageBucket: "firenotes-55f74.appspot.com",
+    messagingSenderId: "878319562021",
+    appId: "1:878319562021:web:bf546e94824ad8e11f7ecc"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+    
+
+
+<script src="https://kit.fontawesome.com/bdaecf5f2e.js" crossorigin="anonymous"></script>
+
+<script type="module" src="sandstorm.js"></script>
+
+</body>
+</html>
